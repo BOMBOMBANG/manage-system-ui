@@ -98,19 +98,7 @@ export default {
   },
   methods: {
     changePassword(name) {
-      this.$refs[name].validate((valid) => {
-        axios.post(`/user/updatePassword`, {
-        newPassword: this.form.newPassword,
-        password: this.form.oldPassword
-        }).then(response => {
-        if (response.success){
-          this.$Message.success("修改成功")
-          this.changePSW = false;
-        }else{
-          this.$Message.warning(response.msg)
-        }
-        })
-      })
+      //修改密码
     },
     handleOpen(key, keyPath) {
       // console.log(key, keyPath);
