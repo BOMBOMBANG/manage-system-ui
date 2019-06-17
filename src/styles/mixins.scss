@@ -1,0 +1,59 @@
+@function tint($color, $weight) {
+  @return mix($color, #FFFFFF, $weight);
+}
+
+@function shade($color, $weight) {
+  @return mix($color, #000000, $weight);
+}
+
+@mixin flex($direction: row, $content: center, $items: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $content;
+  align-items: $items;
+}
+
+@mixin ellipsis($overflow: hidden, $space: nowrap, $text-overflow: ellipsis){
+  overflow: $overflow;
+  white-space: $space;
+  text-overflow: $text-overflow;
+}
+@mixin linearGradient($start-color: #f04126, $end-color: #d92323){
+  background: linear-gradient($start-color, $end-color);
+}
+@mixin search(){
+  .search{
+    height: 0.65rem;
+    // width: 100%;
+    @include flex;
+    justify-content: flex-start;
+    .input{
+      position: relative;
+      width: 150px;
+      margin-left: $base-margin*0.2;
+      margin-right: 30px;
+    }
+    .add {
+      margin-left:  auto;
+      // margin-right: 1%xs
+    }
+  }
+  .page{
+    margin-top: 10px
+  }
+}
+@mixin form() {
+  .form{
+    @include flex;
+    flex-direction: column;
+    &-item{
+      width: 100%;
+      margin-top: $base-margin;
+      @include flex($content:space-between);
+      .input{
+        width: 85%
+      }
+    }
+  }
+  
+}

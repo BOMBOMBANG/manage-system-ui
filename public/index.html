@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+<!-- 引入样式 -->
+<link href="https://cdn.bootcss.com/element-ui/2.7.2/theme-chalk/index.css" rel="stylesheet">
+<link href="https://cdn.bootcss.com/iview/3.4.0-rc.4/styles/iview.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.bootcss.com/driver.js/0.9.6/driver.min.css">
+<!-- 引入组件库 -->
+<script src="https://cdn.bootcss.com/vue/2.6.10/vue.common.dev.js"></script>
+<script src="https://cdn.bootcss.com/vue-router/3.0.6/vue-router.min.js"></script>
+<script src="https://cdn.bootcss.com/vuex/3.1.1/vuex.min.js"></script>
+<script src="https://cdn.bootcss.com/iview/3.4.0-rc.4/iview.js"></script>
+<script src="https://cdn.bootcss.com/element-ui/2.7.2/index.js"></script>
+<script src="https://cdn.bootcss.com/driver.js/0.9.6/driver.min.js"></script>
+<script src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.js"></script>
+<script src="https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts-en.common.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>业绩管理系统</title>
+    <script>
+      (function (window, document) {
+          var docEl = document.documentElement;
+          var viewEl = document.querySelector('meta[name=viewport]');
+          var dpr = window.devicePixelRatio || 1;
+          var scale = 1 / dpr;
+  
+          function layout () {
+              var rem = docEl.clientWidth * 100 / 1920;
+              docEl.style.fontSize = rem + 'px';
+          }
+          viewEl.setAttribute('content', 'width=device-width,initial-scale=' + scale + ',maximum-scale=' + scale + ',minimum-scale=' + scale + ',user-scalable=no');
+          layout();
+  
+          window.addEventListener('resize', layout);
+          window.addEventListener('pageshow', function (e) {
+              if (e.presisted) {
+                  layout();
+              }
+          });
+      })(window, document);
+    </script>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
+      #app {
+        /* background-color: #cccccc; */
+        /*border: 2px solid #333333;*/
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but secien-manger-system-new doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

@@ -1,0 +1,67 @@
+
+// Prefix
+$css-prefix             : cku-;
+
+// Color
+$primary-color          : #2d8cf0;
+$info-color             : #2db7f5;
+$success-color          : #19be6b;
+$processing-color       : $primary-color;
+$warning-color          : #ff9900;
+$error-color            : #ed4014;
+$normal-color           : #e6ebf1;
+$link-color             : rgb(0, 123, 255);
+$link-hover-color       : mix($link-color, #FFFFFF, 20%);
+$link-active-color      : mix($link-color, #000000, 5%);
+$selected-color         : rgba($primary-color, 0.1);
+$tooltip-color          : #fff;
+$subsidiary-color       : #808695;
+$rate-star-color        : #f5a623;
+$goods-price-color      : #f04126;
+$home-title-color       : #fff;
+
+// Base
+$padding-bottom         : 70px;
+$body-background        : #f3f3f3;
+$font-family            : "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+$code-family            : Consolas,Menlo,Courier,monospace;
+$title-color            : #333333;
+$text-color             : #666666;
+$text-color-light       : #999999;
+$font-size-small        : 0.12rem;
+$font-size-base         : 0.15rem;
+$font-size-mid          : 0.17rem;
+$font-size-large        : 0.19rem;
+$font-weight-large      : 600;
+$line-height-base       : 1.5;
+$line-height-computed   : floor(($font-size-base * $line-height-base));
+$cursor-disabled        : not-allowed;
+$base-margin            : 10px;
+$base-padding           : 0.20rem;
+$full-width             : 19.20rem;
+// Border color
+$border-color-base      : #dcdee2;  // outside
+$border-color-split     : #e8eaec;  // inside
+$border-width-base      : 0.01rem;            // width of the border for a component
+$border-style-base      : dashed;          // style of a components border
+$border-base            : $border-width-base $border-style-base $border-color-base;
+
+// Background color
+$background-color-base        : #f3f3f3;  // base
+//$background-color-select-hover: $input-disabled-bg;
+$tooltip-bg                   : rgba(70, 76, 91, .9);
+$head-bg                      : #f9fafc;
+
+$background-color-img: rgba(177, 177, 177, 0.5);
+$box-shadow-color: rgba(100, 100, 100, 0.5);
+
+//component: Card
+$card-hr-color          : #dadada;
+$card-margin            : 0.25rem;
+$card-title-color       : #333333;
+$card-subsidiary-color  : #c0c0c0;
+$base-title-weight      : 600;
+$card-button-color      : #ffe4e0;
+//component: Card font-size
+$store-item-label       : 0.23rem;
+$store-item-value       : 0.20rem;
