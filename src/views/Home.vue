@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div v-if="isShowMeau" :class="{'system-meau-hidden': !systemMeau, 'system-meau': systemMeau,'system-meau-max': mainMin,'system-meau-min':!mainMin}" @mouseover="systemMeau=true" @mouseleave="systemMeau=false">
+    <div id="modal-step-nav" v-if="isShowMeau" :class="{'system-meau-hidden': !systemMeau, 'system-meau': systemMeau,'system-meau-max': mainMin,'system-meau-min':!mainMin}" @mouseover="systemMeau=true" @mouseleave="systemMeau=false">
       <system-meau
         @routeJump="handleJump">
       </system-meau>
@@ -9,8 +9,7 @@
       <system-header
         @on-refresh="handleRefrsh"
         @zoom="handleZoom"></system-header>
-      <system-tabs
-        @routeJump="handleJump">
+      <system-tabs @routeJump="handleJump">
         <keep-alive v-if="!loading" slot="content">
           <div class="main" v-show="$route.name=='home'">
             <home-page :scrollTop="scrollTop"></home-page>
@@ -86,14 +85,13 @@ export default {
       for(let item of this.tabs) {
         if(item.name == routeName) {
           if(item.params) {
-            var par = item.params
+            var params = {};
+            params[item.paramsKey] = item.params
           }
           this.$router.push(
             {
               name: routeName,
-              params: {
-                id: par
-              }
+              params
             }
           )
           this.in = true
@@ -209,6 +207,7 @@ export default {
 
     /*定义滚动条的轨道颜色、内阴影及圆角*/
     &::-webkit-scrollbar-track{
+      box-shadow: inset 0 0 6px rgb(51, 65, 84);
       -webkit-box-shadow: inset 0 0 6px rgb(51, 65, 84);
       background-color: rgb(51, 65, 84);
       border-radius: 3px;
@@ -217,6 +216,7 @@ export default {
     /*定义滑块颜色、内阴影及圆角*/
     &::-webkit-scrollbar-thumb{
       border-radius: 7px;
+      box-shadow: inset 0 0 6px rgb(51, 65, 84);
       -webkit-box-shadow: inset 0 0 6px rgb(51, 65, 84);
       background-color: rgba(232, 232, 232, 0.205);
     }

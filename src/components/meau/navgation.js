@@ -24,6 +24,12 @@ export const navgation = [
     index: '2',
     routeName: 'route3',
     icon: 'ios-people'
+  },
+  {
+    name: 'test5',
+    index: '3',
+    routeName: 'route5',
+    icon: 'ios-people'
   }
 ]
 

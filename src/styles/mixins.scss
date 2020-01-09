@@ -7,10 +7,11 @@
 }
 
 @mixin flex($direction: row, $content: center, $items: center) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $content;
-  align-items: $items;
+  // display: flex;
+  // flex-direction: $direction;
+  // justify-content: $content;
+  // align-items: $items;
+  text-align:center;
 }
 
 @mixin ellipsis($overflow: hidden, $space: nowrap, $text-overflow: ellipsis){
@@ -45,7 +46,7 @@
 @mixin form() {
   .form{
     @include flex;
-    flex-direction: column;
+    // flex-direction: column;
     &-item{
       width: 100%;
       margin-top: $base-margin;

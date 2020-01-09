@@ -4,7 +4,7 @@ import {storageSave, sessionSave, userInfoKey} from '^/storage'
 const state = {
   isCollapse: false,
   userInfo: {
-    indexes: ['1','2']
+    indexes: ['1','2','3']
   },
   hostname: "",
   access_token: "",
@@ -56,12 +56,13 @@ const mutations = {
   SET_refresh_token: (state, refresh_token) => {
     state.refresh_token = refresh_token;
   },
-  PUSH_tabs: (state, tab) => {
+  PUSH_tabs: (state, tab, idKey="id") => {
     // debugger
     for(let i = 0; i < state.tabs.length; i++){
       if(state.tabs[i].name == tab.name) {
         if(tab.params) {
-          state.tabs[i].params = tab.params
+          state.tabs[i].params = tab.params,
+          state.tabs[i].idKey = idKey
         }
         return null
       }

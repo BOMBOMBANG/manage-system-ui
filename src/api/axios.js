@@ -1,11 +1,11 @@
 import axios from "axios";
 import router from "../router";
-import CookieUtils from "./cookies";
-import { token } from "./cookies"
+import CookieUtils from "../utils/cookies";
+import { token } from "../utils/cookies"
 import { Message } from "element-ui";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-import { validateNull } from "./validate-utils";
+import { validateNull } from "../utils/validate-utils";
 import home from "../store/modules/home"
 
 axios.defaults.timeout = 30000;

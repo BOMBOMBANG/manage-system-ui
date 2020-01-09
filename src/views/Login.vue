@@ -47,7 +47,6 @@ import {
   sessionRemove,
   tabsKey
   } from '^/storage'
-import axios from '^/axios'
 
 export default {
   data() {
@@ -121,7 +120,7 @@ export default {
   overflow: hidden;
   position: relative;
   height: 100vh;
-  width: $full-width;
+  width: 100vw;
 }
 .bg {
   position: absolute;
@@ -133,8 +132,8 @@ export default {
   position: absolute;
   top: 9%;
   left: 50%;
-  height: 0.60rem;
-  font-size: 0.55rem;
+  height: 60px;
+  font-size: 55px;
   color: #fff;
   transform: translate(-50%);
 }
@@ -142,8 +141,8 @@ export default {
   position: absolute;
   top: 25%;
   left: 50%;
-  height: 0.40rem;
-  font-size: 0.30rem;
+  height: 40px;
+  font-size: 30px;
   color: #fff;
   transform: translate(-50%);
 }
@@ -163,13 +162,13 @@ export default {
 .logFoot img {
   position: absolute;
   left: 50%;
-  bottom: -0.25rem;
+  bottom: -25px;
   transform: translate(-50%) scale(0.6);
 }
 .uppower{
   position: absolute;
-  bottom: 0.10rem;
-  right: 0.20rem
+  bottom: 10px;
+  right: 20px
 }
 
 .form{
@@ -178,7 +177,7 @@ export default {
   width: 400px;
   &-item{
     @include flex;
-    width: 350px;
+    width: 370px;
     .input-large{
       width: 350px
     }
