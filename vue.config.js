@@ -6,6 +6,7 @@ function resolve (dir) {
 
 module.exports = {
   // target: 'node',
+  publicPath: process.env.BASE_URL,
   lintOnSave: true,
   chainWebpack: (config) => {
     config.resolve.alias

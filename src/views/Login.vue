@@ -11,14 +11,14 @@
   <Form class="form" ref="loginMsg" :model="loginMsg" :rules="ruleLoginMsg">
 
   <FormItem class="form-item" prop="name">
-    <Input class="input-large" placeholder="请输入工号" @on-enter='handleSubmit' v-model="loginMsg.name"  size="large" >
-    <Icon type="ios-contact-outline" slot="prefix" size="24"/>
+    <Input class="input-large" placeholder="账户" @on-enter='handleSubmit' v-model="loginMsg.name"  size="large" >
+    <Icon type="ios-contact-outline" class="active" slot="prefix" size="24"/>
     </Input>
   </FormItem>
 
   <FormItem class="form-item" prop="password">
-    <Input class="input-large" type="password" @on-enter='handleSubmit' placeholder="请输入密码" v-model="loginMsg.password" size="large" >
-    <Icon type="ios-unlock" slot="prefix" size="24"/>
+    <Input class="input-large" type="password" @on-enter='handleSubmit' placeholder="密码" v-model="loginMsg.password" size="large" >
+    <Icon type="ios-unlock" slot="prefix" class="active" size="24"/>
     </Input>
   </FormItem>
 
